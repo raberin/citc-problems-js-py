@@ -13,7 +13,7 @@ const removeDups = list => {
   let currentNode = list.head;
   let prevNode = currentNode;
   while (currentNode.next !== null) {
-    // If not in cache create, otherwise if seen remove it from list
+    // If in cache remove node, otherwise create in cache
     if (map[currentNode.value]) {
       prevNode.next = currentNode.next;
     } else {
